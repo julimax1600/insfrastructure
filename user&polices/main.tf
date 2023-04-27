@@ -1,0 +1,22 @@
+terraform {
+  required_providers {
+    aws = {
+        source = "hashicorp/aws"
+        version = "3.4"
+    }
+  }
+}
+provider "aws" {
+  region     = "us-west-1"
+  access_key = var.access_key_var
+  secret_key = var.secret_key_var
+}
+
+resource "aws_s3_bucket" "bucketjim" {
+  bucket = "my-tf-test-bucket-45"
+
+  tags = {
+    Name = "My bucket"
+  }
+
+}
