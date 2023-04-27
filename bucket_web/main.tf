@@ -26,9 +26,3 @@ resource "aws_s3_bucket" "bucketjim" {
 
 }
 
-  resource "aws_s3_bucket_object" "index" {
-    bucket = aws_s3_bucket.bucketjim.id
-    key    = "index.html"
-    source = "web/index.html"
-  }
-

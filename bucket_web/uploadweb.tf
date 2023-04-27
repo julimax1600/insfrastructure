@@ -16,12 +16,4 @@ resource "aws_s3_bucket_object" "site_files" {
     ".js"   : "application/javascript",
   }, lower(substr(basename(each.value), -3, 3)), "application/octet-stream")
 }
-/*
-resource "aws_s3_bucket_object" "index_html" {
-  bucket = aws_s3_bucket.bucketjim.id
-  key    = "index.html"
-  source = "web/index.html"
 
-  content_type = "text/html"
-}
-*/

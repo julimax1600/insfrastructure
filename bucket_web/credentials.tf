@@ -1,7 +1,7 @@
 variable "access_key_var" {
-  default = "AKIATV6ZMBZV4AQVTJBT"
+  default = "asd"
 }
 
 variable "secret_key_var" {
-  default = "HDJCs7dklpRtYeVT4keTyDAXFPiHLSsGez3rKkro"
+  default = "asd"
 }
