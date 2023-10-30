@@ -2,7 +2,7 @@
 resource "aws_s3_bucket_object" "site_files" {
   for_each = fileset("${path.module}/web", "**/*")
 
-  bucket = aws_s3_bucket.bucketjim.id
+  bucket = aws_s3_bucket.bucket_web.id
   key    = replace(each.value, "^web/", "")
   source = "${path.module}/web/${each.value}"
   content_type = lookup({

@@ -1,7 +1,7 @@
 variable "access_key_var" {
-  default = "asd"
+  default = "***"
 }
 
 variable "secret_key_var" {
-  default = "asd"
+  default = "***"
 }
